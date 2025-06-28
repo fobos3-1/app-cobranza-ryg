@@ -48,5 +48,10 @@ def entregar_tarjeta():
     data_temporal['tarjeta_' + str(cliente)] = tarjeta
     return jsonify({"status": "ok", "mensaje": f"Tarjeta {tarjeta} asignada al cliente {cliente}"})
 
+# Endpoint 6: Saludar, chingaos
+@app.route("/saludo")
+def saludo():
+    return "¡Hola, mundo!"
+
 if __name__ == '__main__':
     app.run(debug=False, host='0.0.0.0', port=10000)
